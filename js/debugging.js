@@ -8,14 +8,29 @@ function getAge()
 {
 var myAge=document.getElementById("myAge").value; //de eerste variabele is voor je aangemaakt...
 
-    if() //vul de juiste voorwaarde in!
+    if(myAge <= 5) //vul de juiste voorwaarde in!
         {
-             //kies code hieronder
+            document.getElementById("brand").src = "images/logo-01.png"
+            document.body.style.backgroundColor = "green";
+            document.getElementById("header").style.backgroundColor = "#1FA6FF";
+            document.getElementById("home").style.backgroundColor = "darkgreen";
+            document.getElementById("main-nav").style.backgroundColor = "black";  //kies code hieronder
         }
-    else
+    else if(myAge <=12)
         {
-             //kies code hieronder
+            document.getElementById("brand").src = "images/logo-02.png"
+            document.body.style.backgroundColor = "#2F2F2F";
+            document.getElementById("header").style.backgroundColor = "grey";
+            document.getElementById("home").style.backgroundColor = "purple";
+            document.getElementById("main-nav").style.backgroundColor = "black";    //kies code hieronder
         }
+    else{
+        document.getElementById("brand").src = "images/logo-02.png"
+            document.body.style.backgroundColor = "red";
+            document.getElementById("header").style.backgroundColor = "gray";
+            document.getElementById("home").style.backgroundColor = "gray";
+            document.getElementById("main-nav").style.backgroundColor = "black"; 
+    }    
 }
 
 function loadChildTheme()
@@ -62,7 +77,7 @@ function myFirstLoop()
 {
     var i; //altijd variabelen declareren, boven de for loop is netter dan erin!
 
-    for (statement1; statement2; statement3) {
+    for (i=1; i<=10; i++) {
         console.log(i); //met console.log zie je de waarde van i terug komen in je watch window (links) en in je console in chrome (via inspect)
       }
 }
@@ -70,11 +85,15 @@ function myFirstLoop()
 //opdracht 3
 
 function myNumbers()
-{
-    //maak hier je code voor opdracht 3
+{ 
+    var text = "";
+    var i;
+    
+    for (i=1; i<=100; i++) {
+        text += i;//maak hier je code voor opdracht 3
 }
-
-
+document.getElementById("numbersText").innerHTML = text;
+}
 //opdracht 4
 
 function myTafel()
